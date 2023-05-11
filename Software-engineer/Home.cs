@@ -31,7 +31,7 @@ namespace Software_engineer
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
 
-            string query = "SELECT HO_TEN FROM BAC_SI WHERE MA_BAC_SI = BS003 ";
+            string query = "SELECT HO_TEN FROM BAC_SI WHERE MA_BAC_SI = @Ma_Bac_Si";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@Ma_Bac_Si", username); // sử dụng giá trị của biến username
 
