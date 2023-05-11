@@ -44,8 +44,6 @@ namespace Software_engineer
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
             this.lbl_login = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -229,38 +227,12 @@ namespace Software_engineer
             // 
             this.lbl_login.AutoSize = true;
             this.lbl_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_login.Location = new System.Drawing.Point(656, 24);
+            this.lbl_login.Location = new System.Drawing.Point(649, 24);
             this.lbl_login.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_login.Name = "lbl_login";
             this.lbl_login.Size = new System.Drawing.Size(192, 39);
             this.lbl_login.TabIndex = 127;
             this.lbl_login.Text = "QUY ĐỊNH";
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.White;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button9.Location = new System.Drawing.Point(508, 561);
-            this.button9.Margin = new System.Windows.Forms.Padding(2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(197, 47);
-            this.button9.TabIndex = 130;
-            this.button9.Text = "Lưu quy định";
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.White;
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button13.Location = new System.Drawing.Point(792, 561);
-            this.button13.Margin = new System.Windows.Forms.Padding(2);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(169, 47);
-            this.button13.TabIndex = 128;
-            this.button13.Text = "Sửa quy định";
-            this.button13.UseVisualStyleBackColor = false;
             // 
             // listView1
             // 
@@ -268,16 +240,18 @@ namespace Software_engineer
             this.columnHeader1,
             this.columnHeader2});
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(436, 108);
+            this.listView1.Location = new System.Drawing.Point(318, 96);
             this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.Name = "listView1";
             this.listView1.RightToLeftLayout = true;
-            this.listView1.Size = new System.Drawing.Size(641, 394);
+            this.listView1.Size = new System.Drawing.Size(976, 394);
             this.listView1.TabIndex = 131;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -287,17 +261,15 @@ namespace Software_engineer
             // columnHeader2
             // 
             this.columnHeader2.Text = "Nội dung";
-            this.columnHeader2.Width = 535;
+            this.columnHeader2.Width = 1200;
             // 
             // Quy_đinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(227)))));
-            this.ClientSize = new System.Drawing.Size(1090, 646);
+            this.ClientSize = new System.Drawing.Size(1326, 753);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button13);
             this.Controls.Add(this.lbl_login);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.button2);
@@ -316,6 +288,7 @@ namespace Software_engineer
             this.Name = "Quy_đinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quy_đinh";
+            this.Load += new System.EventHandler(this.Quy_đinh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -343,8 +316,6 @@ namespace Software_engineer
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label lbl_login;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button13;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -58,5 +59,44 @@ namespace Software_engineer
             quy_Đinh.Show();
             this.Hide();
         }
+
+        private void Quy_đinh_Load(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=.;Initial Catalog=QuanLyPhongMach;Integrated Security=True";
+            string query = "SELECT Quy_dinh, Noi_dung FROM QUY_DINH";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    ListViewItem item = new ListViewItem(reader["Quy_dinh"].ToString());
+                    item.SubItems.Add(reader["Noi_dung"].ToString());
+                    listView1.Items.Add(item);
+                }
+
+                reader.Close();
+            }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //if (listView1.SelectedItems.Count > 0)
+            //{
+            //    ListViewItem selectedItem = listView1.SelectedItems[0];
+            //    selectedItem.Selected = false;
+            //    selectedItem.Focused = false;
+
+            //    //int selectedColumnIndex = listView1.SelectedIndices[0];
+            //    listView1.Items[selectedColumnIndex].Selected = true;
+            //    listView1.Items[selectedColumnIndex].Focused = true;
+            //}
+        }
+
+        
     }
 }
