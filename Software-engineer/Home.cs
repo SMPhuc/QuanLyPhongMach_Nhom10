@@ -13,35 +13,36 @@ namespace Software_engineer
 {
     public partial class Home : Form
     {
-        public Home()
+        public Home(string username)
         {
             InitializeComponent();
+            this.username = username;
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
 
         }
+        private string username;
 
-		private void Home_Load(object sender, EventArgs e)
+        private void Home_Load(object sender, EventArgs e)
 		{
-			string connectionString = "Data Source=.;Initial Catalog=QuanLyPhongMach;Integrated Security=True";
-			SqlConnection connection = new SqlConnection(connectionString);
-			connection.Open();
+            string connectionString = "Data Source=.;Initial Catalog=QuanLyPhongMach;Integrated Security=True";
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
 
-			string query = "SELECT HO_TEN FROM BAC_SI WHERE MA_BAC_SI = @Ma_Bac_Si";
-			SqlCommand command = new SqlCommand(query, connection);
-			command.Parameters.AddWithValue("@Ma_Bac_Si", "BS001");
+            string query = "SELECT HO_TEN FROM BAC_SI WHERE MA_BAC_SI = BS003 ";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@Ma_Bac_Si", username); // sử dụng giá trị của biến username
 
-			SqlDataReader reader = command.ExecuteReader();
-			if (reader.Read())
-			{
-				label1.Text = reader["HO_TEN"].ToString();
-			}
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                lblName.Text = reader["HO_TEN"].ToString(); // hiển thị thông tin HỌ_TÊN lên label1
+            }
 
-			connection.Close();
-		
-		}
+            connection.Close();
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {

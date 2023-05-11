@@ -68,9 +68,10 @@ namespace Software_engineer
 				MessageBox.Show("Đăng nhập thành công!");
 
 				// Mở form chính hoặc thực hiện các hành động khác
-				Home Home = new Home();
+				Home Home = new Home(username);
 				Home.Show();
 				this.Hide();
+
 			}
 			else
 			{
