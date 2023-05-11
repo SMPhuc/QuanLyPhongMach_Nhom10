@@ -47,6 +47,12 @@ namespace Software_engineer
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnNhap = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnXoa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -76,7 +82,7 @@ namespace Software_engineer
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 51);
-            this.button2.TabIndex = 125;
+            this.button2.TabIndex = 2;
             this.button2.Text = "TIẾP NHẬN";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -102,7 +108,7 @@ namespace Software_engineer
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 51);
-            this.button1.TabIndex = 123;
+            this.button1.TabIndex = 3;
             this.button1.Text = "KHÁM BỆNH";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -128,7 +134,7 @@ namespace Software_engineer
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(200, 51);
-            this.button4.TabIndex = 121;
+            this.button4.TabIndex = 6;
             this.button4.Text = "BÁO CÁO";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -136,14 +142,15 @@ namespace Software_engineer
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.White;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(56, 561);
+            this.button7.Font = new System.Drawing.Font("UTM Alexander", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(49, 632);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(200, 51);
-            this.button7.TabIndex = 120;
+            this.button7.TabIndex = 13;
             this.button7.Text = "THOÁT";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // pictureBox7
             // 
@@ -166,7 +173,7 @@ namespace Software_engineer
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(200, 51);
-            this.button3.TabIndex = 114;
+            this.button3.TabIndex = 4;
             this.button3.Text = "HÓA ĐƠN";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -191,7 +198,7 @@ namespace Software_engineer
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(200, 51);
-            this.button5.TabIndex = 115;
+            this.button5.TabIndex = 5;
             this.button5.Text = "TRA CỨU";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -218,7 +225,7 @@ namespace Software_engineer
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(200, 51);
-            this.button6.TabIndex = 116;
+            this.button6.TabIndex = 14;
             this.button6.Text = "QUY ĐỊNH";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -231,7 +238,7 @@ namespace Software_engineer
             this.lbl_login.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_login.Name = "lbl_login";
             this.lbl_login.Size = new System.Drawing.Size(192, 39);
-            this.lbl_login.TabIndex = 127;
+            this.lbl_login.TabIndex = 1;
             this.lbl_login.Text = "QUY ĐỊNH";
             // 
             // listView1
@@ -239,7 +246,7 @@ namespace Software_engineer
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.Font = new System.Drawing.Font("UTM Alexander", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
@@ -248,7 +255,7 @@ namespace Software_engineer
             this.listView1.Name = "listView1";
             this.listView1.RightToLeftLayout = true;
             this.listView1.Size = new System.Drawing.Size(976, 394);
-            this.listView1.TabIndex = 131;
+            this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
@@ -263,12 +270,86 @@ namespace Software_engineer
             this.columnHeader2.Text = "Nội dung";
             this.columnHeader2.Width = 1200;
             // 
+            // btnNhap
+            // 
+            this.btnNhap.BackColor = System.Drawing.Color.White;
+            this.btnNhap.Font = new System.Drawing.Font("UTM Alexander", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhap.Location = new System.Drawing.Point(311, 632);
+            this.btnNhap.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNhap.Name = "btnNhap";
+            this.btnNhap.Size = new System.Drawing.Size(200, 51);
+            this.btnNhap.TabIndex = 9;
+            this.btnNhap.Text = "Nhập mới";
+            this.btnNhap.UseVisualStyleBackColor = false;
+            this.btnNhap.Click += new System.EventHandler(this.btnNhap_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.BackColor = System.Drawing.Color.White;
+            this.btnSua.Font = new System.Drawing.Font("UTM Alexander", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Location = new System.Drawing.Point(576, 632);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(200, 51);
+            this.btnSua.TabIndex = 10;
+            this.btnSua.Text = "Sửa quy định";
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.BackColor = System.Drawing.Color.White;
+            this.btnLuu.Font = new System.Drawing.Font("UTM Alexander", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Location = new System.Drawing.Point(1064, 632);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(200, 51);
+            this.btnLuu.TabIndex = 12;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("UTM Alexander", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(318, 525);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(143, 39);
+            this.textBox1.TabIndex = 7;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("UTM Alexander", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(483, 525);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(781, 39);
+            this.textBox2.TabIndex = 8;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BackColor = System.Drawing.Color.White;
+            this.btnXoa.Font = new System.Drawing.Font("UTM Alexander", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Location = new System.Drawing.Point(823, 632);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(200, 51);
+            this.btnXoa.TabIndex = 11;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
             // Quy_đinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(227)))));
             this.ClientSize = new System.Drawing.Size(1326, 753);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.lbl_login);
             this.Controls.Add(this.pictureBox4);
@@ -277,6 +358,10 @@ namespace Software_engineer
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnLuu);
+            this.Controls.Add(this.btnSua);
+            this.Controls.Add(this.btnNhap);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.button3);
@@ -288,7 +373,7 @@ namespace Software_engineer
             this.Name = "Quy_đinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quy_đinh";
-            this.Load += new System.EventHandler(this.Quy_đinh_Load);
+            this.Load += new System.EventHandler(this.LoadData);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -319,5 +404,11 @@ namespace Software_engineer
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.Button btnNhap;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnXoa;
     }
 }
